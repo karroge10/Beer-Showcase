@@ -6,9 +6,7 @@ import Custom404 from '../404'
 
 export default function Item ({item}) {
     if (item.error){
-        return (
-            <Custom404 />
-        )
+        return (<Custom404 />)
     } else {
         item = item[0];
         const {query} = useRouter();

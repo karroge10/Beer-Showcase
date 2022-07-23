@@ -1,0 +1,21 @@
+.paginator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.paginator a {
+  margin: 25px;
+  border: 1px solid #dee2e6;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.paginator .active {
+  cursor: pointer;
+}
+.paginator .disabled {
+  cursor: not-allowed;
+  color: rgb(179, 179, 179);
+}
