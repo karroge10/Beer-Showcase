@@ -15,6 +15,20 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 5em;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.page-header{
+    font-size: 2.5em;
+    margin: 0.5em;
+}
+.search-container{
+    margin: 2em;
 }
 .pagination-list{
     display: flex;
@@ -22,8 +36,31 @@ body{
     margin-top: 25px;
 }
 .items-container{
-    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    display: grid; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+    width: 80%;
+    list-style: none;
+}
+.item-container{
+    text-decoration: none;
+    height: 100%;
+}
+.item-name{
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.item-description{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+img{
+    width: auto;
+    height: 300px;
 }

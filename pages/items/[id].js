@@ -1,6 +1,5 @@
-import { useRouter } from "next/router";
+import ItemContainer from "../../components/ItemContainer";
 import MainContainer from "../../components/MainContainer";
-import styles from '../../styles/Item.module.scss'
 import Custom404 from '../404'
 
 export default function Item ({item}) {
@@ -8,15 +7,9 @@ export default function Item ({item}) {
         return (<Custom404 />)
     } else {
         item = item[0];
-        const {query} = useRouter();
         return (
             <MainContainer pageName={item.name} keywords={item.tagline}>
-                <div className={styles.item}>
-                    <h1>Beer id: {query.id}</h1>
-                    <div>
-                        Beer name: {item.name}
-                    </div>
-                </div>
+                <ItemContainer item={item} />
             </MainContainer>
         )
     }

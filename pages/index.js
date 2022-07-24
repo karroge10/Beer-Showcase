@@ -1,22 +1,14 @@
 import MainContainer from '../components/MainContainer';
 import Pagination from '../components/Pagination';
-import Link from 'next/link'
 import SearchForm from '../components/Search';
-
+import ItemsContainer from '../components/ItemsContainer';
 
 const Index = ({items}) => {
     return (
-        <MainContainer pageName={"Beer Selection"}>
-            <h1>Beer Selection</h1>
+        <MainContainer pageName={"Beer Selection"} keywords={"Home Page"}>
+            <h1 className='page-header'>Our Beer Selection</h1>
             <SearchForm />
-            <ul>
-                {items.map(item => 
-                    <li key={item.id}>
-                        <Link href={`/items/${item.id}`}>
-                            <a>{item.name}</a>
-                        </Link>
-                    </li>)}
-            </ul>
+            <ItemsContainer items={items}/>
             <Pagination pageNumber={1}/>
         </MainContainer>
     )
