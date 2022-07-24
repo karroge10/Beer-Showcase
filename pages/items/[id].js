@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { render } from "react-dom";
 import MainContainer from "../../components/MainContainer";
 import styles from '../../styles/Item.module.scss'
 import Custom404 from '../404'

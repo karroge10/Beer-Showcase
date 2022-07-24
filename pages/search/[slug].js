@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Items = ({items, pageNumber }) => {
     if (items.error){
-        return (<Custom404 />)
+        return (<h1>ОШИБКА</h1>)
     } else {
         return (
             <MainContainer pageName={"Beer Selection"}>
@@ -23,27 +23,24 @@ const Items = ({items, pageNumber }) => {
     };
 };
 
-export const getServerSideProps = async pageContext => {
-    const pageNumber = pageContext.query.pid;
-
-    if (!pageNumber || pageNumber < 1 || pageNumber > 13) {
-        return {
-            props: {
-                items: [],
-                pageNumber: 1,
-            },
-        };
+export async function getServerSideProps({params}) {
+    let items = [];
+    for (let i = 1; i < 14; i++) {
+        const response = await fetch(`https://api.punkapi.com/v2/beers?page=${i}`);
+        const searchResult = await response.json();
+        searchResult.forEach(item => {
+            if (item.name.toUpperCase().match(params.slug.toUpperCase())){
+                items.push(item)
+            }
+            return items;
+        });
     }
-
-    const response = await fetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}`)
-    const items = await response.json();
+    
+    // !!! Items length can be bigger than 25. Add pagination feature to display all !!!
 
     return {
-        props: {
-            items: items,
-            pageNumber: Number.parseInt(pageNumber),
-        },
-    };
-};
+        props: {items}, // will be passed to the page component as props
+    }
+}
 
 export default Items;

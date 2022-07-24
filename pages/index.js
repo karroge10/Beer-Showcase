@@ -1,10 +1,14 @@
 import MainContainer from '../components/MainContainer';
+import Pagination from '../components/Pagination';
 import Link from 'next/link'
+import SearchForm from '../components/Search';
+
 
 const Index = ({items}) => {
     return (
         <MainContainer pageName={"Beer Selection"}>
             <h1>Beer Selection</h1>
+            <SearchForm />
             <ul>
                 {items.map(item => 
                     <li key={item.id}>
@@ -13,15 +17,7 @@ const Index = ({items}) => {
                         </Link>
                     </li>)}
             </ul>
-            <div className='pagination-container'>
-                <ul className='pagination-list'>
-                    <li><a className='page-button'>Previous</a></li>
-                    <li><a className='page-button'>1</a></li>
-                    <Link href={`/page/${2}`}>
-                        <a>Next Page</a>
-                    </Link>
-                </ul>
-            </div>
+            <Pagination pageNumber={1}/>
         </MainContainer>
     )
 };
