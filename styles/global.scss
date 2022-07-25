@@ -18,6 +18,8 @@ html {
     padding: 0;
 	background-color: $main-white;
 	font: 100% $font-stack;
+    color: $main-black;
+    
 }
 body{
     overflow-x: hidden;
@@ -49,7 +51,7 @@ nav{
     top: 0;
 }
 .page-header{
-    color: $main-black;
+    
     padding: 0.5em;
     font-size: 2.5em;
     cursor: pointer;

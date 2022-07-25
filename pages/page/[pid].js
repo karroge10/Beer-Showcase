@@ -10,7 +10,7 @@ const Items = ({items, pageNumber }) => {
     } else {
         return (
             <MainContainer pageName={"Beer Selection"}>
-                <SearchForm />
+                <SearchForm flag={'no-search'}/>
                 <Pagination pageNumber={pageNumber}/>
                 <ItemsContainer items={items}/>
                 <Pagination pageNumber={pageNumber}/>

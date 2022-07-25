@@ -1,0 +1,31 @@
+@import 'colors.scss';
+
+// .loaderContainer{
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     top: 0;
+//     height: 100%;
+//     z-index: 9999;
+//     background-color: $main-grey;
+
+//     img{
+//         display: inline-block;
+//         margin: auto;
+//         width: 200px;
+//     }
+// }
+
+.loaderContainer{
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+

@@ -6,7 +6,7 @@ import ItemsContainer from '../components/ItemsContainer';
 const Index = ({items}) => {
     return (
         <MainContainer pageName={"Beer Selection"} keywords={"Home Page"}>
-            <SearchForm />
+            <SearchForm flag={'no-search'}/>
             <Pagination pageNumber={1}/>
             <ItemsContainer items={items}/>
             <Pagination pageNumber={1}/>

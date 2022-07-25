@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from '../styles/Items.module.scss'
+import placeholder from '../styles/images/placeholder.jpg'
 
 const ItemsContainer = ({items}) => {
     return (
@@ -9,7 +10,7 @@ const ItemsContainer = ({items}) => {
                     <li key={item.id} className={styles.itemContainer}>
                         <Link href={`/items/${item.id}`}>
                             <div className={styles.imageContainer}>
-                                <img className={styles.image} src={item.image_url}/>
+                                <img className={styles.image} src={item.image_url === null ? placeholder.src : item.image_url} />
                             </div>
                         </Link>
                         <div className={styles.itemInfo}>
