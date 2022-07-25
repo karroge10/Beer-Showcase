@@ -13,6 +13,7 @@ const MainContainer = ({children, pageName, keywords}) => {
                 <NavLink href={'/about'} text="About Us"></NavLink>
             </div>
             <div className="wrapper">
+            <h1 className='page-header'>Beer Menu</h1>
                 {children}
             </div>
         </>

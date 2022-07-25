@@ -7,7 +7,7 @@ const Pagination = ({pageNumber, pageQuery, maxPage}) => {
     // If pagination is used from /search/, pageQuery is passed. If from /page/ then we have to set it as empty string.
     if (!pageQuery){
         pageQuery = '';
-        maxPage = 13;
+        maxPage = 17;
     }
 
     return (
