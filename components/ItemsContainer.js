@@ -1,16 +1,25 @@
 import Link from 'next/link';
+import styles from '../styles/Items.module.scss'
 
 const ItemsContainer = ({items}) => {
     return (
         <>
-            <ul className='items-container'>
+            <ul className={styles.itemsContainer}>
                 {items.map(item => 
-                    <li key={item.id} className='item-container'>
+                    <li key={item.id} className={styles.itemContainer}>
                         <Link href={`/items/${item.id}`}>
-                            <p className='item-name'>{item.name}</p>
+                            <div className={styles.imageContainer}>
+                                <img className={styles.image} src={item.image_url}/>
+                            </div>
                         </Link>
-                        <img src={item.image_url}/>
-                        <p className='item-description'>{item.description}</p>
+                        <div className={styles.itemInfo}>
+                            <div className={styles.itemNameContainer}>
+                                <Link href={`/items/${item.id}`}>
+                                    <p className={styles.itemName}>{item.name}</p>
+                                </Link>
+                            </div>
+                            <p>{item.description.substring(0, 140) + '...'}</p>
+                        </div>
                     </li>)}
             </ul>
         </>

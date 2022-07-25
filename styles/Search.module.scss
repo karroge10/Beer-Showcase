@@ -1,0 +1,59 @@
+@import 'colors.scss';
+
+.searchForm{
+    margin-top: 8em;
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    input{
+        padding: 0.7em 1.5em;
+        border-radius: 3px;
+        font-size: 1em;
+        font-weight: 600;
+        border: 1px solid $main-black;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        letter-spacing: 0.5px;
+    }
+}
+
+.input{
+    margin-right: 1em;
+    outline: none;
+}
+.input:focus{
+    background-color: $main-yellow;
+    color: black;
+}
+
+.button{
+    background-color: $main-yellow;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: $active;
+}
+
+@media screen and (max-width: 700px) {
+    .searchForm{
+        margin-top: 7em;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .searchForm{
+        flex-direction: column;
+        width: 80%;
+        margin-bottom: 1em;
+    }
+    .input{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+    
+}

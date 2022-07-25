@@ -1,18 +1,24 @@
 import styles from '../styles/Item.module.scss'
-import { useRouter } from "next/router";
 
 const ItemContainer = ({item}) => {
-    console.log(item)
-    const {query} = useRouter();
     return (
         <>
             <div className={styles.item}>
-                <h1>Beer name: {item.name}</h1>
-                <p>{item.tagline}</p>
-                <p>{item.description}</p>
-                <p>{item.abv}</p>
-                <p>{item.food_pairings}</p>
-                <img src={item.image_url} />
+                <div className={styles.imageContainer}>
+                    <img className={styles.image} src={item.image_url} />
+                </div>
+                <div className={styles.infoContainer}>
+                    <h1 className={styles.name}>{item.name}</h1>
+                    <i className={styles.tagline}>{item.tagline}</i>
+                    <p className={styles.description}>{item.description}</p>
+                    <p className={styles.abv}>ABV: {item.abv}</p>
+                    <p className={styles.foodPairings}>Food pairings:</p>
+                    {item.food_pairing.map((pairing, index) => 
+                        <li key={index}>{pairing}</li>
+                    )}
+                </div>
+
+                
             </div>
         </>
     );

@@ -1,17 +1,17 @@
 import MainContainer from "../../../../components/MainContainer";
 import Pagination from "../../../../components/Pagination";
-import SearchForm from "../../../../components/Search";
+import SearchForm from "../../../../components/SearchForm";
 import Custom404 from "../../../404";
-import Link from 'next/link';
 import ItemsContainer from "../../../../components/ItemsContainer";
 
 const SearchedItems = ({ items, pageNumber, searchTerm, lastPage }) => {
-    if (items.error || items.length === 0){
+    if (items.error || items.length === 0 || searchTerm == undefined){
         return (<Custom404 />)
     } else {
         return (
-            <MainContainer>
+            <MainContainer pageName={'Seach Results For "' + searchTerm + '"'}>
                 <SearchForm searchTerm={searchTerm} />
+                <Pagination pageNumber={pageNumber} pageQuery={`/search/${searchTerm}`} maxPage={lastPage} />
                 <ItemsContainer items={items}/>
                 <Pagination pageNumber={pageNumber} pageQuery={`/search/${searchTerm}`} maxPage={lastPage} />
             </MainContainer>
@@ -33,7 +33,7 @@ export const getServerSideProps = async pageContext => {
             return items;
         });
     }
-
+    items.sort((a, b) => a.name.localeCompare(b.name));
 
     // Slice items list for 20 items per page
     return {

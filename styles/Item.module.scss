@@ -1,5 +1,101 @@
-.item {
-    h1 {
-        color: rgb(31, 24, 24);
+@import 'colors.scss';
+
+.item{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 60%;
+    height: 80vh;
+    margin-top: 10em;
+    margin-bottom: 2em;
+}
+.imageContainer{
+    width: 48%;
+    padding: 3em;
+    height: 70vh;
+    border: 1px solid $main-grey;
+    .image{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.infoContainer{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.name{
+    font-weight: 700;
+    font-size: 3em;
+    text-shadow: 4px 4px 3px $main-yellow;
+    margin-bottom: 0.2em;
+}
+.tagline, .description{
+    margin-bottom: 2em;
+}
+.abv{
+    margin-bottom: 2em;
+    font-weight: 700;
+}
+.foodPairings{
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .item{
+        width: 85%;
+    }
+    .imageContainer{
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    .item{
+        width: 75%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7em;
+        margin-bottom: 5em;
+    }
+    .imageContainer{
+        height: 60%;
+        width: 100%
+    }
+    .infoContainer{
+        margin-top: 1em;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .item{
+        margin-top: 5em;
+        margin-bottom: 2em;
+        width: 80%;
+    }
+    .imageContainer{
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .item{
+        margin-top: 2em;
+        margin-bottom: 0em;
+
+    }
+    .imageContainer{
+        height: 40%;
     }
 }

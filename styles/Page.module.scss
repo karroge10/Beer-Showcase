@@ -1,0 +1,42 @@
+@import 'colors.scss';
+
+.paginator {
+  margin-top: 1.3em;
+  margin-bottom: 3em;
+
+  a {
+    margin: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
+    border: 1px solid $main-black;
+    background-color: $main-yellow;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: all 200ms ease-in-out;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+  }   
+  
+  a:nth-child(2){
+    cursor: auto;
+  }
+  
+  .active {
+    cursor: pointer;
+  }
+
+  .disabled {
+    cursor: not-allowed;
+    background-color: $disabled;
+  }
+  .active:hover{
+    background-color: $active;
+  }
+}
+
+

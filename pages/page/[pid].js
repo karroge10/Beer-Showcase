@@ -1,8 +1,8 @@
 import MainContainer from "../../components/MainContainer";
 import Pagination from "../../components/Pagination";
-import Link from 'next/link';
 import Custom404 from "../404";
 import ItemsContainer from "../../components/ItemsContainer";
+import SearchForm from "../../components/SearchForm";
 
 const Items = ({items, pageNumber }) => {
     if (items.error || items.length === 0){
@@ -10,6 +10,8 @@ const Items = ({items, pageNumber }) => {
     } else {
         return (
             <MainContainer pageName={"Beer Selection"}>
+                <SearchForm />
+                <Pagination pageNumber={pageNumber}/>
                 <ItemsContainer items={items}/>
                 <Pagination pageNumber={pageNumber}/>
             </MainContainer>
