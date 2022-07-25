@@ -7,7 +7,9 @@
     "dev": "next dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "gh-pages -d .next",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/karroge10/Beer-Showcase/issues"
   },
-  "homepage": "https://github.com/karroge10/Beer-Showcase#readme",
+  "homepage": "https://karroge10.github.io/Beer-Showcase/",
   "dependencies": {
     "next": "^12.2.3",
     "react": "^18.2.0",
