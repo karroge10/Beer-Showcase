@@ -7,8 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "gh-pages -d .next",
-    "predeploy": "npm run build"
+    "export": "next export"
   },
   "repository": {
     "type": "git",

@@ -19,15 +19,23 @@ const SearchedItems = ({ items, pageNumber, searchTerm, lastPage }) => {
     };
 };
 
-export const getServerSideProps = async pageContext => {
-    const pageNumber = pageContext.query.pid;
+export async function getStaticPaths() {
+    return {
+        paths: [{ params: { pid: '1', searchTerm: 'abc'},  }],
+      fallback: false,
+    }
+  }
+
+export async function getStaticProps(context) {
+    console.log(context)
+    const pageNumber = context.params.pid;
     let items = [];
 
     for (let i = 1; i < 18; i++) {
         const response = await fetch(`https://api.punkapi.com/v2/beers?page=${i}&per_page=20`);
         const searchResult = await response.json();
         searchResult.forEach(item => {
-            if (item.name.toUpperCase().match(pageContext.query.searchTerm.toUpperCase())){
+            if (item.name.toUpperCase().match(context.params.searchTerm.toUpperCase())){
                 items.push(item)
             }
             return items;
@@ -40,7 +48,7 @@ export const getServerSideProps = async pageContext => {
         props: {
             items: items.slice(20 * (pageNumber - 1), 20 * pageNumber),
             pageNumber: Number.parseInt(pageNumber),
-            searchTerm: pageContext.query.searchTerm,
+            searchTerm: context.params.searchTerm,
             lastPage: parseInt(items.length / 20) + 1,
         },
     };
