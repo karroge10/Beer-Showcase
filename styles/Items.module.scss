@@ -7,8 +7,6 @@
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2em 2em;
-    grid-row-gap: 2em;
-    grid-column-gap: 2em;
     height: 100%;
     width: 70%;
     list-style: none;
@@ -73,8 +71,6 @@
     .itemsContainer{
         width: 90%;
         gap: 4em 2em;
-        grid-row-gap: 2em;
-        grid-column-gap: 4em;
         margin-bottom: 5em;
     }
     .itemContainer{
@@ -87,8 +83,6 @@
         grid-template-columns: 1fr 1fr;
         width: 70%;
         gap: 2em;
-        grid-row-gap: 2em;
-        grid-column-gap: 2em;
     }
     .itemContainer{
         height: 600px;
@@ -99,8 +93,6 @@
     .itemsContainer{
         width: 80%;
         gap: 4em 2em;
-        grid-row-gap: 2em;
-        grid-column-gap: 4em;
      }
     .itemContainer{
         height: 450px;
@@ -121,8 +113,6 @@
     .itemsContainer{
         width: 90%;
         gap: 5em 1em;
-        grid-row-gap: 1em;
-        grid-column-gap: 5em;
         grid-template-columns: 1fr 1fr;
      }
     .itemContainer{
@@ -143,8 +133,6 @@
         display: flex;
         flex-direction: column;
         gap: 1em 0;
-        grid-row-gap: 0;
-        grid-column-gap: 1em;
      }
     .itemContainer{
         height: 450px;
@@ -160,7 +148,5 @@
 @media screen and (max-width: 350px){
     .itemsContainer{
         gap: 2em 0;
-        grid-row-gap: 0;
-        grid-column-gap: 2em;
      }
 }
