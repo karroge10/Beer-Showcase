@@ -1,5 +1,5 @@
 # BeerCo | Cold Craft Beer Store
- SSR Application built with React, Next.js and Punk API.
+ SSR Application built with React, Next.js, Punk API and Sass.
 ## [https://beerco.netlify.app](https://beerco.netlify.app)
  
 
@@ -30,7 +30,7 @@ My email is egorkabantsov@gmail.com.
 
 
 # BeerCo | Cold Craft Beer Store
- SSR Приложение, созданное с помощью React, Next.js и Punk API.
+ SSR Приложение, созданное с помощью React, Next.js, Punk API и Sass.
 
 ## Информация
 Функции:
