@@ -1,6 +1,6 @@
 import ItemContainer from "../../components/ItemContainer";
 import MainContainer from "../../components/MainContainer";
-import Custom404 from '../404'
+import Custom404 from '../../components/404'
 
 export default function Item ({item}) {
     if (item.error){

@@ -1,7 +1,7 @@
 import MainContainer from "../../../../components/MainContainer";
 import Pagination from "../../../../components/Pagination";
 import SearchForm from "../../../../components/SearchForm";
-import Custom404 from "../../../404";
+import Custom404 from "../../../../components/404";
 import ItemsContainer from "../../../../components/ItemsContainer";
 
 const SearchedItems = ({ items, pageNumber, searchTerm, lastPage }) => {

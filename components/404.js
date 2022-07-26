@@ -1,5 +1,5 @@
-import MainContainer from '../components/MainContainer';
-import SearchForm from '../components/SearchForm';
+import MainContainer from './MainContainer';
+import SearchForm from './SearchForm';
 
 const Custom404 = () => {
     return (
