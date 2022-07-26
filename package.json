@@ -1,24 +1,26 @@
 {
-  "name": "beer-showcase",
+  "name": "beerco",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "gh-pages -d .next",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/karroge10/Beer-Showcase.git"
+    "url": "git+https://github.com/karroge10/BeerCo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/karroge10/Beer-Showcase/issues"
+    "url": "https://github.com/karroge10/BeerCo/issues"
   },
-  "homepage": "https://karroge10.github.io/Beer-Showcase/",
+  "homepage": "https://karroge10.github.io/BeerCo/",
   "dependencies": {
     "gh-pages": "^4.0.0",
     "next": "^12.2.3",
