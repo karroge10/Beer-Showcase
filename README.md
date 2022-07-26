@@ -13,7 +13,7 @@ Features:
 
 ## Usage
 * Run `npm install` to install all required modules. 
-* Start with `npm run start`. 
+* Start with `npm run dev`. 
 * Open [http://localhost:3000](http://localhost:3000)
 
 ## Contributing
@@ -42,7 +42,7 @@ My email is egorkabantsov@gmail.com.
 
 ## Использование
 * Запустите `npm install` чтобы установить все необходимые модули. 
-* Запустите `npm run start`. 
+* Запустите `npm run dev`. 
 * Откройте [http://localhost:3000](http://localhost:3000)
 
 ## Содействие
