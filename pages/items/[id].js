@@ -15,17 +15,8 @@ export default function Item ({item}) {
     }
 };
 
-export async function getStaticPaths() {
-    return {
-        paths: [{ params: { id: '1' }}, {params: { id: '2' }}],
-      fallback: true,
-    }
-  }
-
-  export async function getStaticProps(context) {
-   
-    const itemId = context.params.id;
-    const response = await fetch(`https://api.punkapi.com/v2/beers/${itemId}`);
+export async function getServerSideProps({params}) {
+    const response = await fetch(`https://api.punkapi.com/v2/beers/${params.id}`);
     const item = await response.json();
 
     return {

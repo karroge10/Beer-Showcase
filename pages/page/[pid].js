@@ -19,15 +19,8 @@ const Items = ({items, pageNumber }) => {
     };
 };
 
-export async function getStaticPaths() {
-    return {
-        paths: [{ params: { pid: '1' } }],
-      fallback: true,
-    }
-  }
-
-export async function getStaticProps(context) {
-    const pageNumber = context.params.pid;
+export const getServerSideProps = async pageContext => {
+    const pageNumber = pageContext.query.pid;
 
     const response = await fetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}&per_page=20`)
     const items = await response.json();
