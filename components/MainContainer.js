@@ -11,7 +11,7 @@ const MainContainer = ({children, pageName, keywords}) => {
             <div className="wrapper">
                 <nav>
                     <Link href={'/'}>
-                        <h1 className='page-header'>Beer Menu</h1>
+                        <h1 className='page-header'>The Cold Craft</h1>
                     </Link>
                 </nav>
                 {children}
