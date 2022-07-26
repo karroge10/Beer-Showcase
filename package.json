@@ -6,9 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "deploy": "gh-pages -d .next",
-    "predeploy": "npm run build"
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -22,6 +20,7 @@
   },
   "homepage": "https://karroge10.github.io/Beer-Showcase/",
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "next": "^12.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
