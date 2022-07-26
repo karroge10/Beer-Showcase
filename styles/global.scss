@@ -34,6 +34,10 @@ p, h1{
 }
 .wrapper{
     display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -42,6 +46,10 @@ p, h1{
 nav{
     background-color: $main-yellow;
     display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
     align-items: center;
     justify-content: center;
     width: 100%;
