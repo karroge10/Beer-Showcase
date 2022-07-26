@@ -1,2 +1,2 @@
-# Beer-Showcase
+# BeerCo | Cold Craft Beer Store
  
